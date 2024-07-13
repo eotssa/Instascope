@@ -6,7 +6,7 @@ function parseUserInput(input) {
   const lines = input.split('\n').filter((line) => line.trim() !== '')
   const users = []
 
-  for (let i = 2; i < lines.length; i++) {
+  for (let i = 0; i < lines.length; i++) {
     const profilePicture = lines[i]
     const username = lines[i + 1]
     const name =
@@ -44,7 +44,7 @@ function compareFollowersAndFollowing(followers, following) {
   }
 }
 
-router.post('/compare', (req, res) => {
+router.post('/', (req, res) => {
   try {
     const { followersInput, followingInput } = req.body
 
