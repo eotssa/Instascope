@@ -36,14 +36,14 @@ const Main = () => {
 
   return (
     <>
-      <section className="container mx-auto px-40 pt-8 lg:px-36">
+      <section className="container mx-auto px-4 pt-8 md:px-8 lg:px-36">
         <div className="mx-auto flex max-w-7xl flex-wrap justify-center">
           <div className="mb-16 mt-12 w-full px-4 lg:w-7/12 lg:px-8 xl:px-12">
             <div className="text-left">
-              <h1 className="text-5xl font-bold text-center">
+              <h1 className="text-3xl md:text-5xl font-bold text-center">
                 Compare Instagram Followers and Following
               </h1>
-              <p className="py-6 text-lg font-medium">
+              <p className="py-6 text-md md:text-lg font-medium">
                 Copy your followers and following lists below to see who you
                 follow that doesn't follow you back, and who follows you that
                 you don't follow back.
@@ -52,26 +52,26 @@ const Main = () => {
             <div className="card w-full bg-slate-200/60 shadow-xl">
               <div className="card-body">
                 <form onSubmit={handleCompare} className="space-y-4">
-                  <div className="flex flex-wrap justify-between">
+                  <div className="flex flex-wrap justify-between space-y-4 md:space-y-0">
                     {/* Followers input */}
-                    <div className="form-control w-full lg:w-1/2 pr-2">
+                    <div className="form-control w-full lg:w-1/2 pr-0 md:pr-2">
                       <textarea
                         placeholder="Enter Followers List"
                         className="textarea textarea-bordered w-full"
                         value={followersInput}
                         onChange={(e) => setFollowersInput(e.target.value)}
-                        rows="15"
+                        rows="10"
                       ></textarea>
                     </div>
 
                     {/* Following input */}
-                    <div className="form-control w-full lg:w-1/2 pl-2">
+                    <div className="form-control w-full lg:w-1/2 pl-0 md:pl-2">
                       <textarea
                         placeholder="Enter Following List"
                         className="textarea textarea-bordered w-full"
                         value={followingInput}
                         onChange={(e) => setFollowingInput(e.target.value)}
-                        rows="15"
+                        rows="10"
                       ></textarea>
                     </div>
                   </div>

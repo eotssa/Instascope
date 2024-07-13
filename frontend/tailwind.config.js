@@ -20,10 +20,6 @@ export default {
         'insta-purple': '#833AB4',
         'insta-dark-pink': '#C13584',
       },
-      // backgroundImage: {
-      //   "custom-radial-gradient":
-      //     "radial-gradient(62.24% 62.24% at 50% 50%, #1E283A 68.83%, #293344 100%)",
-      // },
     },
   },
   plugins: [require('@tailwindcss/typography'), daisyui],
