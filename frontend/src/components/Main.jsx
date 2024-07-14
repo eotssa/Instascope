@@ -36,9 +36,9 @@ const Main = () => {
 
   return (
     <>
-      <section className="container mx-auto px-4 pt-8 md:px-8 lg:px-36">
+      <section className="container mx-auto px-4 md:px-8 lg:px-12 xl:px-16 pt-8">
         <div className="mx-auto flex max-w-7xl flex-wrap justify-center">
-          <div className="mb-16 mt-12 w-full px-4 lg:w-7/12 lg:px-8 xl:px-12">
+          <div className="mb-16 mt-12 w-full px-4 lg:w-8/12 xl:px-16">
             <div className="text-left">
               <h1 className="text-3xl md:text-5xl font-bold text-center">
                 Compare Instagram Followers and Following
@@ -52,9 +52,9 @@ const Main = () => {
             <div className="card w-full bg-slate-200/60 shadow-xl">
               <div className="card-body">
                 <form onSubmit={handleCompare} className="space-y-4">
-                  <div className="flex flex-wrap justify-between space-y-4 md:space-y-0">
+                  <div className="flex flex-col lg:flex-row justify-between space-y-4 lg:space-y-0 lg:space-x-4">
                     {/* Followers input */}
-                    <div className="form-control w-full lg:w-1/2 pr-0 md:pr-2">
+                    <div className="form-control w-full lg:w-1/2">
                       <textarea
                         placeholder="Enter Followers List"
                         className="textarea textarea-bordered w-full"
@@ -65,7 +65,7 @@ const Main = () => {
                     </div>
 
                     {/* Following input */}
-                    <div className="form-control w-full lg:w-1/2 pl-0 md:pl-2">
+                    <div className="form-control w-full lg:w-1/2">
                       <textarea
                         placeholder="Enter Following List"
                         className="textarea textarea-bordered w-full"

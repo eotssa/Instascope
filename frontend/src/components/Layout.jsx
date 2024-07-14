@@ -5,7 +5,7 @@ const Layout = ({ children }) => {
   return (
     <>
       <div className="navbar sticky top-0 z-50 border-b bg-gradient-to-r from-[#405DE6] via-[#5B51D8] via-30% via-[#833AB4] via-50% via-[#C13584] via-70% via-[#E1306C] via-85% to-[#FD1D1D]">
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto px-4 md:px-8 lg:px-12 xl:px-16">
           <div className="flex justify-between items-center">
             <div className="flex-1 font-bold">
               <a className="btn btn-ghost hover:transparent text-2xl md:text-4xl font-bold text-white">
@@ -28,7 +28,9 @@ const Layout = ({ children }) => {
           </div>
         </div>
       </div>
-      <div>{children}</div>
+      <div className="container mx-auto px-4 md:px-8 lg:px-12 xl:px-16">
+        {children}
+      </div>
     </>
   )
 }
