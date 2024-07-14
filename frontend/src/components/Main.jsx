@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import axios from 'axios'
 import '../index.css'
+import tutorialImage from './tutorial.png' // Import the image
 
 const Main = () => {
   const [followersInput, setFollowersInput] = useState('')
@@ -36,12 +37,12 @@ const Main = () => {
 
   return (
     <>
-      <section className="container mx-auto px-4 md:px-8 lg:px-12 xl:px-16 pt-8">
-        <div className="mx-auto flex max-w-7xl flex-wrap justify-center">
-          <div className="mb-16 mt-12 w-full px-4 lg:w-8/12 xl:px-16">
+      <section className="container mx-auto px-4 md:px-8 lg:px-12 xl:px-24 pt-8">
+        <div className="mx-auto flex max-w-8xl flex-wrap justify-center">
+          <div className="mb-16 mt-12 w-full px-4 lg:w-10/12 xl:w-8/12">
             <div className="text-left">
               <h1 className="text-3xl md:text-5xl font-bold text-center">
-                Compare Instagram Followers and Following
+                Compare Followers and Following
               </h1>
               <p className="py-6 text-md md:text-lg font-medium">
                 Copy your followers and following lists below to see who you
@@ -80,7 +81,7 @@ const Main = () => {
                   <div className="form-control">
                     <button
                       type="submit"
-                      className="btn bg-sky-500 text-slate-200 text-lg w-full"
+                      className="btn bg-gradient-to-r from-[#405DE6] via-[#5B51D8] via-30% via-[#833AB4] via-50% via-[#C13584] via-70% via-[#E1306C] via-85% to-[#FD1D1D] text-slate-200 text-lg w-full"
                       disabled={loading}
                     >
                       {loading ? (
@@ -97,8 +98,8 @@ const Main = () => {
                   )}
 
                   {/* Display comparison result */}
-                  <div className="form-control">
-                    {comparisonResult && (
+                  {comparisonResult && (
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
                       <div className="max-h-96 overflow-auto rounded-lg bg-gray-50 p-4 text-left">
                         <h3 className="text-lg font-bold">
                           People who aren't following you back ☹️:
@@ -110,9 +111,10 @@ const Main = () => {
                             2
                           )}
                         </pre>
+                      </div>
+                      <div className="max-h-96 overflow-auto rounded-lg bg-gray-50 p-4 text-left">
                         <h3 className="text-lg font-bold">
-                          People who you follow you but you don't follow back
-                          😬:
+                          People who follow you but don't follow back 😬:
                         </h3>
                         <pre className="text-xs antialiased font-light">
                           {JSON.stringify(
@@ -122,10 +124,28 @@ const Main = () => {
                           )}
                         </pre>
                       </div>
-                    )}
-                  </div>
+                    </div>
+                  )}
                 </form>
               </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="container mx-auto px-4 md:px-8 lg:px-12 xl:px-24 pt-8">
+        <div className="mx-auto flex max-w-8xl flex-wrap justify-center">
+          <div className="mb-16 mt-12 w-full px-4 lg:w-10/12 xl:w-8/12">
+            <div className="text-left">
+              <p className="py-6 text-md md:text-lg font-medium">
+                Go to your Instagram followers list, select and drag to copy all
+                the usernames, then paste them in the input box.
+              </p>
+              <img
+                src={tutorialImage}
+                alt="Tutorial"
+                className="w-full h-auto"
+              />
             </div>
           </div>
         </div>
