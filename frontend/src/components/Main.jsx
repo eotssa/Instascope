@@ -80,11 +80,11 @@ const Main = () => {
                   <div className="form-control">
                     <button
                       type="submit"
-                      className="btn bg-sky-500 text-slate-200 text-lg w-full bg-gradient-to-r from-[#405DE6] via-[#5B51D8] via-30% via-[#833AB4] via-50% via-[#C13584] via-70% via-[#E1306C] via-85% to-[#FD1D1D]"
+                      className="btn bg-sky-500 text-slate-200 text-lg w-full"
                       disabled={loading}
                     >
                       {loading ? (
-                        <span className="loading loading-bars loading-lg "></span>
+                        <span className="loading loading-bars loading-lg"></span>
                       ) : (
                         'Compare'
                       )}

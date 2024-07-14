@@ -7,20 +7,18 @@ function parseUserInput(input) {
   const users = []
 
   for (let i = 0; i < lines.length; i++) {
-    const profilePicture = lines[i]
-    const username = lines[i + 1]
+    const username = lines[i]
     const name =
-      i + 2 < lines.length && !lines[i + 2].includes('profile picture')
-        ? lines[i + 2]
+      i + 1 < lines.length && !lines[i + 1].includes('profile picture')
+        ? lines[i + 1]
         : ''
 
     users.push({
-      profilePicture,
       username,
       name,
     })
 
-    i += name ? 2 : 1 // Adjust the index for users with the third line
+    i += name ? 1 : 0 // Adjust the index for users with the third line
   }
 
   return users
